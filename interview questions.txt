@@ -1,0 +1,186 @@
+Python Scripting
+Fizzbuzz
+Given a list of timestamps in sequential order, return a list of lists grouped by weekly aggregation.
+Given a list of characters, a list of prior of probabilities for each character, and a matrix of probabilities for each character combination, return the optimal sequence for the highest probability.
+Given a log file with rows featuring a date, a number, and then a string of names, parse the log file and return the count of unique names aggregated by month.
+Product
+Given there are no metrics being tracked for Google Docs, a product manager comes to you and asks what are the top five metrics you would implement?
+In addition, let’s say theres a dip in the engagement metric of Google Docs. What would you investigate?
+Let’s say we want to implement a notification system for reminding nurses to discharge patients at a hospital. How would you implement it?
+Let’s say at LinkedIn we want to implement a green dot for an “active user” on the new messaging platform. How would you analyze the effectiveness of it for roll out?
+SQL
+Given a payment transactions table and a customers table, return the customer’s name and the first transaction that the customer made.
+Given a payments transactions table, return a frequency distribution of the number of payments each customer made. (I.E. 1 transaction — 100 customers, 2 transactions — 50 customers, etc…)
+Given the same payments table, return the cumulative distribution. (At least one transaction, at least two transactions, etc…)
+Given a table of — friend1|friend2. Return the number of mutual friends between two friends.
+AB Testing
+Given AB test funnel statistics such as the sample size, sign up rate, feature 1 usage rate, feature 2 usage rate, analyze which variant won and why.
+How would you design an experiment to change a button on a sign up page?
+How do you know if you have enough sample size?
+How do you run significance tests on more than one variant?
+How do you reduce variance and bias in an AB test?
+Explain a P-value and confidence interval to a product manager or non-technical person.
+Machine Learning
+What features would you use to predict the time spent for a restaurant preparing food from the moment an order comes in?
+Can you come up with a scenario in which you would rather under-predict versus over-predict?
+Analyzing the results of a model, how would you explain the tradeoff between bias and variance?
+Explain how a Random Forest model actual works under the hood.
+How do you know if you have enough data for your model?
+How do you evaluate a model? (F1 score, ROC curve, cross validation, etc…)
+Probability
+Given uniform distributions X and Y and the mean 0 and standard deviation 1 for both, what’s the probability of 2X > Y?
+There are four people in an elevator and four floors in a building. What’s the probability that each person gets off on a different floor?
+What’s the probability that two people get off on the same floor?
+Given a deck of cards labeled from 1 to 100, what’s the probability of getting Pick 1 < Pick2 < Pick3?
+
+
+
+
+Amazon
+Example Technical Interview Questions:
+
+(Coding) Given an Array of numbers & a target value, return indexes of two numbers such that their Absolute difference is equal to the target
+(Coding) Given two dates D1 & D2. count number of days, months?
+(Coding) Find 1st missing positive number (must do in O(1) memory & O(n) time)
+(Machine Learning) How do to find thresholds for a classifier?
+(Machine Learning) What’s the difference between logistic regression and support vector machines? What's an example of a situation where you would use one over the other?
+(Machine Learning) Explain ICA and CCA. How do you get a CCA objective function from PCA?
+(Machine Learning) What is the relationship between PCA with a polynomial kernel and a single layer autoencoder? What if it is a deep autoencoder?
+(Machine Learning) What is "random" in random forest? If you use logistic regression instead of a decision tree in random forest, how will your results change?
+(Modeling) What is the interpretation of an ROC area under the curve as an integral?
+(Coding) Given an array a, return the indices i,j that minimize |a_i -a_j|
+
+(LP Question): How do you deal with good quality when delivering to customers?
+Why are you leaving your current job?
+How do you handle conflict with team members?
+
+Let's say you have a categorical variable with thousands of distinct values, how would you encode it?
+
+This depends on whether the problem is a regression or a classification model.
+
+If it's a regression model, one way would be to cluster them based on the response variable by working backwards. You could sort them by the response variable, and then split the categorical variables into buckets based on the grouping of the response variable. This could be done by using a shallow decision tree to reduce the number of categories.
+
+Another way given a regression model would be to target encode them. Replace each category in a variable with the mean response given that category. Now you have one continuous feature instead of a bunch of categories.
+
+For a binary classification, you can target encode the column by finding the conditional probability of the response variable being a one, given that the categorical column takes a particular value. Then replace the categorical column with this numerical value. For example if you have a categorical column of city in predicting loan defaults, and the probability of a person who lives in San Francisco defaults is 0.4, you would then replace "San Francisco" with 0.4.
+
+Additionally if working with classification model, you could try grouping them by the category's frequency. The most frequent categories may dominate in the total make-up and the least frequent may make up a long tail with a few samples each. By looking at the frequency distribution of the categories, you could find the drop-off point where you could leave the top X categories alone and then categorize the rest into an "other bucket" giving you X+1 categories.
+
+If you want to be more precise, total the categories that give you the 90 percentile in the cumulative and dump the rest into the "other bucket".
+
+Lastly we could also try using a Louvain community detection algorithm. Louvain is a method to extract communities from large networks without setting a pre-determined number of clusters like K-means.
+
+
+
+
+google
+
+Example Behavioral Interview Questions
+
+Describe a past data science based project.
+How do you sort priorities when engaged in multitasking
+
+
+Machine Learning
+What is the difference between K-mean and EM?
+Why use feature selection? If two predictors are highly correlated, what is the effect on the coefficients in the logistic regression? What are the confidence intervals of the coefficients?
+What is the function of p-values in high dimensional linear regression?
+Statistics & Probability
+For a sample size of N, the margin of error is 3. How many more samples do we need for the margin of error to hit 0.3?
+What is the assumption of error in linear regression?
+How can you tell if a given coin is biased?
+Explain how a probability distribution could be not normal and give an example scenario.
+You have a deck and you take one card at random and guess what the card is. What is the probability you guess right?
+What is the difference between parametric and non-parametric testing?
+Product & Business
+How would you detect inappropriate content on Youtube?
+How do you test if a new feature has increased engagement in Google's ecosystem?
+If the outcome of an experiment results in one group clicking 5% more than the other, is that a good result?
+Programming
+Write a function to generate N samples from a normal distribution and plot the histogram.
+
+Business case study: Questions are mainly case-study type involving real-life Google problems. The interviewer may ask you to then write a query to analyze the business case study using SQL.
+Applied statistics and ML interview: This interview covers statistical concepts and modeling questions as well as a related coding question.
+Product Metrics: This interview covers a product case study. It will be a deep dive into a product and how to analyze success of a feature or debug what might be happening in the data.
+Leadership and Product Sense Interview: This interview assesses your leadership skills. The aim here is to understand how you leverage your communication and decision-making to influence others.
+Googlyness Interview: This interview is basically about how well you work with others, help team members achieved team goals, how you can navigate workplace ambiguity, and how well you can work under pressure
+Notes and Tips
+It is of worth to note that Google questions are standardized and rely heavily on situational scenarios with their products. Study Google's large breadth of products and understand how you would personally improve or test them.
+Google’s data science interview aims to determine the level of domain knowledge you possess how you could provide business-driving insights. Brush up on your knowledge of statistics and probability given these questions can be some of the hardest to solve.
+There are four general attributes that Google looks for in candidates. First is the general cognitive ability, which screens based on how candidates can learn and adapt to new situations. The second is role-related knowledge which is based on background, skillsets, and experience that are specific and relevant to the roles. The third is the leadership attribute. Google’s core culture is about building a team of high performers individuals who are great team players and can one day step into leadership roles. The fourth and last attribute is the Googlyness, to ensure candidate succeed in their roles. Google assesses on “comfort with ambiguity”, “bias to action”, and a “collaborative nature” [1].
+Google at its core has an employee-focused culture. It has a corporate culture that motivates employees to share information cross-functionally to support innovation that enables it to maintain its competitiveness. This ecosystem ensures that every employee maintains competitiveness and innovativeness through training and informally through personalized leadership and management support.
+
+
+Example Google Data Science Interview Question and Solution
+Question:
+
+Given three random variables independent and identically distributed from a uniform distribution of 0 to 4, what is the probability that the median is greater than 3?
+
+Solution:
+
+If we break down this question, we'll find that another way to phrase it is to ask what the probability is that at least two of the variables are larger than 3.
+
+For example, if look at the combination of events that satisfy the condition, the events can actually be divided into two exclusive events.
+
+Event A: All three random variables are larger than 3.
+Event B: One random variable is smaller than 3 and two are larger than 3.
+
+Given these two events satisfy the condition of the median > 3, we can now calculate the probability of both of the events occuring. The question can now be rephrased as P(Median > 3) = P(A) + P(B).
+
+Let's calculate the probability of the event A. The probability that a random variable > 3 but less than 4 is equal to 1/4. So the probability of event A is:
+
+P(A) = (1/4) * (1/4) * (1/4) = 1/64
+
+The probability of event B is that two values must be greater than 3, but one random variable is smaller than 3. We can calculate this the same way as the calculating the probability of A. The probability of a value being greater than 3 is 1/4 and the probability of a value being less than 3 is 3/4. Given this has to occur three times we multiply the condition three times.
+
+P(B) = 3 * ((3/4) * (1/4) * (1/4)) = 9/64
+
+Therefore the total probability is P(A)+P(B) = 1/64 + 9/64 = 10/64
+
+
+
+facebook
+
+Product and Business Sense
+How would you create a process to identify fake news postings on Facebook? Define a metric.
+Facebook sees that likes are up 10% year over year, why could this be?
+How can Facebook figure out when users falsify their attended schools?
+If 70% of Facebook users on iOS use Instagram, but only 35% of Facebook users on Android use Instagram, how would you investigate the discrepancy?
+
+
+Data Analysis
+Write a query to map nicknames (Pete, Andy, Nick, Rob, etc) to real names.
+Write a query to produce a histogram of user comments.
+
+Statistics and Probability
+Let's say you're playing a dice game. You have 2 die. What's the probability of rolling at least one 3?
+What do you think the distribution of time spent per day on Facebook looks like?
+Modeling
+How would you design a classifier to send email notifications on photo posts?
+
+xample Facebook Product Interview Question and Solution
+Question:
+
+Let's say you're working on Facebook Groups.
+
+A product manager decides to add threading to comments on group posts. We see comments per user increase by 10% but posts go down 2%. Why would that be?
+
+Additionally, what metrics would prove your hypotheses?
+
+Solution:
+
+When comments are added to threads, we can theorize the following changes happen within Group postings:
+
+Ideas become bucketized and structured, so it becomes easier to search, navigate, and respond to different users with threads.
+Responders are forced to stay on the thread as opposed to posting a new comment or post. This can create new dynamics within user workflows and notifications with only users within the specific thread being notified as opposed to the entire comment group and original poster.
+Diving more into the activity that occurs within the notifications part the change. We can theorize that threading pushes fewer notifications to the poster (and more to the top-level commenter). This would mean fewer push notifs that bring people back to their device and therefore less posting in general. More discussion would happen within the threads which could cause the notification system to increase comments.
+The order in which your comment appeared within the post becomes irrelevant so there's no barrier to posting over shortened periods of time. This allows encourages deeper discussions as the time barrier disappears.
+Late readers may find their answers already if the same question has been previously asked, preventing duplicate posts.
+Responding to specific comments becomes possible as opposed to regular comments which are first in first out.
+You can see that all of these workflows drive an increase of comments within the same posts, but prevent creation of new posts.
+
+We can measure this through looking at a before and after analysis or an island test (where one encapsulated community gets the threaded comments and another does not).
+
+If we look at metrics like the number of new posts per group member and the number of comments per post in both a before and after and island test, we can see if the effects were significant enough to induce the change.
+
+
